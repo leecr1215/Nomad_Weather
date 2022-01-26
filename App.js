@@ -10,7 +10,19 @@ import {
 } from "react-native";
 //import { WEATHER_KEY, GOOGLE_MAP_KEY } from "./API.js";
 import APIs from "./API.js";
+import { Ionicons } from "@expo/vector-icons";
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
+
+const icons = {
+  // 날씨명 : 아이콘명
+  Clouds: "cloudy",
+  Clear: "day-sunny",
+  Atmosphere: "cloudy-gusts",
+  Snow: "snow",
+  Rain: "rains",
+  Drizzle: "rain",
+  Thunderstorm: "lightning",
+};
 
 export default function App() {
   const [city, setCity] = useState("Loading...");
@@ -53,7 +65,7 @@ export default function App() {
         contentContainerStyle={styles.weather}
       >
         {days.length === 0 ? (
-          <View>
+          <View style={{ ...styles.day, alignItems: "center" }}>
             <ActivityIndicator
               color="white"
               style={{ marginTop: 10 }}
@@ -63,9 +75,23 @@ export default function App() {
         ) : (
           days.map((day, index) => (
             <View key={index} style={styles.day}>
-              <Text style={styles.temp}>
-                {parseFloat(day.temp.day).toFixed(1)}
-              </Text>
+              <View
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  width: "100%",
+                }}
+              >
+                <Text style={styles.temp}>
+                  {parseFloat(day.temp.day).toFixed(1)}
+                </Text>
+                <Fontisto
+                  name={icons[day.weather[0].main]}
+                  size={68}
+                  color="white"
+                />
+              </View>
               <Text style={styles.description}>{day.weather[0].main}</Text>
               <Text style={styles.tinyText}>{day.weather[0].description}</Text>
             </View>
