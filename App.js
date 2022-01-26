@@ -8,9 +8,9 @@ import {
   ScrollView,
   ActivityIndicator,
 } from "react-native";
-//import { WEATHER_KEY, GOOGLE_MAP_KEY } from "./API.js";
+
 import APIs from "./API.js";
-import { Ionicons } from "@expo/vector-icons";
+import { Fontisto } from "@expo/vector-icons";
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 const icons = {
