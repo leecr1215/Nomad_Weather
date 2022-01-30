@@ -41,3 +41,35 @@
   - cmd에 `expo init 앱이름` 입력 후 enter 누르기
   - cmd에서 expo login으로 로그인
   - npm start
+- react native의 rule
+  - div 대신 View 태그 사용
+  - 존재하는 텍스트는 모두 text component 안에 들어가야 함
+- `StyleSheet.create`
+  - object를 생성하는데 사용
+  - 사용하는 이유
+    - 좋은 자동 완성 기능을 제공함
+    - component 정리에 좋음
+- Layout System
+  - `<View>`는 display: flex가 기본 값
+  - 웹의 flex direction의 기본값은 row지만 모바일은 column임
+- ScrollView
+  - 내부의 component와 View를 자식으로 담을 수 있고 화면의 스크롤을 사용할 때 사용하는 component
+  - 스크롤 방향은 horizontal을 통해 가로 또는 세로로 변경 가능
+  - `contentContainerStyle={{styles.변수}}`
+  - `pagingEnabled`로 페이지처럼 만들 수 있음
+  - `showsHorizontalScrollIndicator={false}` 로 스크롤 바를 없앨 수 있음
+  - `indicatorStyle="white"`으로 스크롤바의 색상을 변경할 수 있음(ios에서만 작용)
+  - 자세한 사용방법 : [reactnative.dev](https://reactnative.dev/docs/scrollview)
+- Dimensions
+  - 화면 크기를 얻는 API
+- location
+  - `expo install expo-location` 입력
+  - `Location.requestForegroundPermissionAsync()`으로 유저에게 위치 접근 권한 동의 알림창 보여줌
+  - `Location.getCurrrentPositionAsync()`으로 user의 위도와 경도를 알아냄
+  - `Location.reverseGeocodeAsync()`으로 위도와 경도를 이용해 주소를 가져옴
+  - openweatherorg의 api를 이용해 날씨를 가져옴
+- toFixed()
+  - 원하는 소수점만큼 남길 수 있음
+  - (12.12).toFixed(1) -> 12.1
+- expo/vector-icons
+  - icons.expo.fyi 사이트에 가면 아이콘 확인 가능
