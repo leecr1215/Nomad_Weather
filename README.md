@@ -9,7 +9,8 @@
 - If you agree to location access, you can view the weather for your current location
 - It shows the weather for 6 days including today
 
-   <img width="200" alt="icon" src="https://user-images.githubusercontent.com/52441923/153756354-c5d382ee-9943-45b9-a400-51ced38025c8.png">
+   <img width="200" alt="icon" src="https://user-images.githubusercontent.com/52441923/153756354-c5d382ee-9943-45b9-a400-51ced38025c8.png">  
+   <img width="200" alt="icon" src="https://user-images.githubusercontent.com/52441923/154804537-4da1768e-c5c7-4654-ab43-561265473fc1.png">
 
 ## 🖱 Blog
 
